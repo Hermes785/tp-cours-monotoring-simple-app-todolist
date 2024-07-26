@@ -134,6 +134,11 @@ describe('GET /allUser', () => {
                 'id': 14,
                 'nom': 'junior',
                 'prenom': 'mboutman'
+            },
+            {
+                'id': 15,
+                'nom': 'roger',
+                'prenom': 'milla',
             }
         ]);
     });
