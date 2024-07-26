@@ -1,6 +1,6 @@
 const request = require('supertest');
 const { server, app } = require('../server');  // Assurez-vous que ces exportations sont correctes dans votre fichier serveur
-const { afterAll, describe, it, beforeAll } = require('@jest/globals');
+const { afterAll, describe, it } = require('@jest/globals');
 
 afterAll(() => {
     server.close();
