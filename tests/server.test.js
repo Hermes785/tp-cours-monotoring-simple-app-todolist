@@ -80,7 +80,20 @@ describe('GET /AllTacheWithUser', () => {
                 'statut': 'à faire',
                 'nom': 'Brown',
                 'prenom': 'Michael'
+            },
+            {
+                'id': 9,
+                'titre': 'laver les assiete',
+                'description': 'lorem ipsum dolores et accusamus',
+                'date_creation': '2024-07-26T10:00:00Z',
+                'date_echeance': '2024-07-28T10:00:00Z',
+                'statut': 'à faire',
+                'nom': 'Taylor',
+                'prenom': 'Emily',
+
+
             }
+
         ]);
     });
 });
