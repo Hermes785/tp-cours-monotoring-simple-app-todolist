@@ -138,3 +138,32 @@ describe('GET /allUser', () => {
         ]);
     });
 });
+describe('POST /createUser', () => {
+    it('should create a new user', async () => {
+        const newUser = { nom: 'roger', prenom: 'milla' };
+        const response = await request(app)
+            .post('/createUser')
+            .send(newUser);
+        expect(response.status).toBe(200);
+        expect(response.body).toEqual(expect.objectContaining(newUser));
+    });
+});
+
+describe('POST /createTache', () => {
+    it('should create a new task', async () => {
+        const newTache = {
+            titre: 'laver les assiete',
+            description: 'lorem ipsum dolores et accusamus ',
+            date_creation: '2024-07-26T10:00:00Z',
+            date_echeance: '2024-07-28T10:00:00Z',
+            statut: 'à faire',
+            utilisateur_id: 6
+        };
+        const response = await request(app)
+            .post('/createTache')
+            .send(newTache);
+        expect(response.status).toBe(200);
+        expect(response.body).toEqual(expect.objectContaining(newTache));
+
+    });
+});
